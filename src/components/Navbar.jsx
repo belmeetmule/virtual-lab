@@ -24,7 +24,7 @@ export default function Navbar() {
                 <ul className="hidden lg:flex ml-14 space-x-12">
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href} className="text-neutral-100 hover:text-neutral-200">
+                            <a href={item.href} className="text-neutral-100 hover:text-orange-500 transition duration-300">
                                 {item.label}
                                 </a>
                         </li>
@@ -32,7 +32,7 @@ export default function Navbar() {
                 </ul>
 
                 <div className="hidden lg:flex justify-center space-x-12 items-center">
-                    <a href="#" className='py-2 px-3 border rounded-md hover:bg-orange-600'> 
+                    <a href="#" className='py-2 px-3 border rounded-md hover:bg-orange-600 transition duration-300'> 
                         Sign In
                     </a>
 
@@ -52,14 +52,14 @@ export default function Navbar() {
                     <ul>
                         {navItems.map((item, index) => (
                             <li key={index} className="py-4">
-                                <a key={index} href={item.href} className="text-neutral-100 hover:text-orange-500">
+                                <a key={index} href={item.href} className="text-neutral-100 hover:text-orange-500 transtion duration-200">
                                     {item.label}
                                 </a>
                             </li>
                         ))}
                     </ul>
                     <div className="flex space-x-6 mb-4">
-                        <a href="#" className='py-2 px-3 border rounded-md hover:bg-orange-600'>
+                        <a href="#" className='py-2 px-3 border rounded-md hover:bg-orange-600 transtion duration-200'>
                             Sign In
                         </a>
                         <a href="#" className='bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md'>
