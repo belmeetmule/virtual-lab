@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import FeaturesSection from './components/FeaturesSection'
@@ -13,15 +10,19 @@ import Footer from './components/Footer'
 const App = () => {
 
   return (
-    <>
+    <Router>
       <Navbar />
-      <HeroSection />
-      <FeaturesSection />
-      <Workflow />
-      <PriceSection />
-      <Testimonial />
+      
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/features" element={<FeaturesSection />}  />
+        <Route path="/workflow" element={<Workflow />} />
+        <Route path="/pricing" element={<PriceSection />} />
+        <Route path="/testimonials" element={<Testimonial />} />
+        
+      </Routes>
       <Footer />
-    </>
+    </Router>
      
   )
 }
