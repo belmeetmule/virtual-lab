@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {Menu, X} from 'lucide-react'
 import React from 'react'
 import logo from '../assets/logo.png'
@@ -12,21 +14,25 @@ export default function Navbar() {
         setIsMobileViewOpen(!isMobileViewOpen)
     }
 
+       
+
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/800">
         <div className="container px-4 mx-auto relative text-sm">
             <div className="flex justify-between items-center">
-                <div className="flex items-center flex-shrink-0">
+               
+                <Link to="/" className="flex items-center flex-shrink-0">
                     <img src={logo} alt="Logo" className='h-10 w-10 mr-2' />
                     <div className="text-xl tracking-tight"> Company </div>
-                </div>
+                </Link>
+                
 
                 <ul className="hidden lg:flex ml-14 space-x-12">
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href} className="text-neutral-100 hover:text-orange-500 transition duration-300">
+                            <Link to={item.href} className="text-neutral-100 hover:text-orange-500 transition duration-300">
                                 {item.label}
-                                </a>
+                                </Link>
                         </li>
                     ))}
                 </ul>
@@ -52,9 +58,13 @@ export default function Navbar() {
                     <ul>
                         {navItems.map((item, index) => (
                             <li key={index} className="py-4">
-                                <a key={index} href={item.href} className="text-neutral-100 hover:text-orange-500 transtion duration-200">
+                                <Link 
+                                    to={item.href} 
+                                    className="text-neutral-100 hover:text-orange-500 transtion duration-200"
+                                    onClick={toggleMenu}
+                                >
                                     {item.label}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
