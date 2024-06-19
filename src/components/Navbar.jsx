@@ -23,7 +23,7 @@ export default function Navbar() {
                
                 <Link to="/" className="flex items-center flex-shrink-0">
                     <img src={logo} alt="Logo" className='h-10 w-10 mr-2' />
-                    <div className="text-xl tracking-tight"> Company </div>
+                    <div className="text-xl tracking-tight"> Virtual Lab </div>
                 </Link>
                 
 
